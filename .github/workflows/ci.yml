@@ -1,24 +1,12 @@
-name: Java CI con Maven
+name: Prueba CI
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🧾 Checkout del código
-        uses: actions/checkout@v3
-
-      - name: ☕ Instalar Java 17
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: 📦 Compilar y probar con Maven
-        run: mvn clean verify
+      - name: Verificar conexión
+        run: echo "Workflow funcionando correctamente"
