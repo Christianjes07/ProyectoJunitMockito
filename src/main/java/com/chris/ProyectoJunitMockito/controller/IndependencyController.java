@@ -50,9 +50,8 @@ public class IndependencyController {
         return ResponseEntity.ok(countryResponse);
     }
 
-
-//cometario para git
     @GetMapping("/todosPaises")
+    public ResponseEntity<List<Country>> getAllCountries() {
 
         Iterable<Country> iterable = countryRepository.findAll();
         List<Country> paises = StreamSupport.stream(iterable.spliterator(), false)

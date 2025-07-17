@@ -1,5 +1,7 @@
 package com.chris.ProyectoJunitMockito.unit;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -26,8 +28,12 @@ public class CalculadoraYearOfIndependencyTest {
         System.out.println(resultado.getMonths());
         System.out.println(resultado.getYears());
 
-        
+    }
 
+    @Test
+    void testSuma() {
+        int resultado = 2 + 2;
+        assertEquals(5, resultado); // Esto va a fallar
     }
 
 }
